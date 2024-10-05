@@ -30,14 +30,14 @@ import io
 import logging
 
 bot = Client("bot",
-             bot_token= "6818261867:AAFhXboqTtBzh7vl1Mh05B9z0VZZGHsC9iU",
-             api_id= 20225480,
-             api_hash= "70f93c98c61a40f69c0f830bd4fece7c")
+             bot_token= "7521089253:AAGHqiw4e7ewdc1qt7eonChimNf-Dr7dYXw",
+             api_id= 23981002,
+             api_hash= "9549825af7363be26b4b53e5bb3e737a")
 
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /mybro")
+    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /bookzone")
 
 
 @bot.on_message(filters.command("stop"))
@@ -47,7 +47,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["mybro"]))
+@bot.on_message(filters.command(["bookzone"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT file for download')
     input: Message = await bot.listen(editable.chat.id)
